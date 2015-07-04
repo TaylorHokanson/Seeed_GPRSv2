@@ -15,10 +15,10 @@ Open Arduino IDE serial monitor, set to 19200 baud
 
 I couldn't do everything the Seeed tutorial asked me to do with the
 Arduino IDE serial monitor, so I downloaded this one:
-http://freeware.the-meiers.org/ 
+http://freeware.the-meiers.org/  
 Options  
-Serial Port  
-* Baud = 19200  
-  ** Device = usbmodemXXXX  
-Terminal  
-* Line mode 
+* Serial Port  
+Baud = 19200  
+Device = usbmodemXXXX  
+* Terminal  
+  * Line mode 
