@@ -19,6 +19,6 @@ http://freeware.the-meiers.org/
 Options  
 Serial Port  
 * Baud = 19200  
-** Device = usbmodemXXXX  
+  ** Device = usbmodemXXXX  
 Terminal  
 * Line mode 
