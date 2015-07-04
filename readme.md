@@ -18,7 +18,7 @@ Arduino IDE serial monitor, so I downloaded this one:
 http://freeware.the-meiers.org/ 
 Once you open the program, click the Options button  
 Serial Port  
-Baud = 19200 
-Device = usbmodemXXXX 
-...Terminal 
+Baud = 19200  
+Device = usbmodemXXXX  
+...Terminal  
 ...Line mode 
