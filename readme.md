@@ -1,5 +1,7 @@
 # Setting up a SeeedStudios GPRS board (v2)
-Here are the [original instructions](http://www.seeedstudio.com/wiki/GPRS_Shield_V2.0). 
+These little boards give your Arduino the ability to send and receive
+phone calls and texts! Here are the [original
+instructions](http://www.seeedstudio.com/wiki/GPRS_Shield_V2.0). 
 I've added to them and cleaned things up for readability. I'm working in OSX.
 
 ### Activate GSM card
@@ -18,8 +20,7 @@ Attach Seeed board to Arduino
 ### Coolterm
 
 I couldn't do everything the Seeed tutorial asked me to do with the
-Arduino IDE serial monitor, so I downloaded this one:
-http://freeware.the-meiers.org/  
+Arduino IDE serial monitor, so I downloaded [Coolterm](http://freeware.the-meiers.org/) (free).  
 
 Options  
 * Serial Port  
