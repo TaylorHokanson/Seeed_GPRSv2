@@ -1,9 +1,10 @@
 # Setting up a SeeedStudios GPRS board (v2)
 Here are the [original instructions](http://www.seeedstudio.com/wiki/GPRS_Shield_V2.0). 
-I've added to them and cleaned things up for readability.
+I've added to them and cleaned things up for readability. I'm working in OSX.
 
 ### Activate GSM card
 
+I got mine through [Adafruit](https://www.adafruit.com/products/2505), but it looks like you can order straight through Ting too.
 ting.com/go  
 Enter IMEI number from Seeed board  
 Enter number on back of sim
