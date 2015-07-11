@@ -2,42 +2,44 @@
 
 //Serial Relay - Arduino will patch a 
 //serial link between the computer and the GPRS Shield
-//at 19200 bps 8-N-1
+//at 9600 bps 8-N-1
 //Computer is connected to Hardware UART
 //GPRS Shield is connected to the Software UART 
  
 #include <SoftwareSerial.h>
  
 SoftwareSerial GPRS(7, 8);
-unsigned char buffer[64]; // buffer array for data recieve over serial port
-int count=0;     // counter for buffer array 
+unsigned char buffer[64];          // buffer array for data recieve over serial port
+int count=0;                       // counter for buffer array 
 void setup()
 {
-  GPRS.begin(19200);               // the GPRS baud rate   
-  Serial.begin(19200);             // the Serial port of Arduino baud rate.
+  GPRS.begin(9600);               // GPRS baud rate (software)  
+  Serial.begin(9600);             // Arduino baud rate (hardware)
  
 }
  
 void loop()
 {
-  if (GPRS.available())              // if date is comming from softwareserial port ==> data is comming from gprs shield
+  
+/* Data traveling from GPRS to Arduino ************/
+  if (GPRS.available())              
   {
     while(GPRS.available())          // reading data into char array 
     {
-      buffer[count++]=GPRS.read();     // writing data into array
+      buffer[count++]=GPRS.read();   // writing data into array
       if(count == 64)break;
   }
-    Serial.write(buffer,count);            // if no data transmission ends, write buffer to hardware serial port
+    Serial.write(buffer,count);      // if no data transmission ends, write buffer to hardware serial port
     clearBufferArray();              // call clearBufferArray function to clear the storaged data from the array
     count = 0;                       // set counter of while loop to zero
- 
- 
   }
-  if (Serial.available())            // if data is available on hardwareserial port ==> data is comming from PC or notebook
+
+/* Data traveling from Arduino to GPRS ***************/
+  if (Serial.available())            
     GPRS.write(Serial.read());       // write it to the GPRS shield
 }
 void clearBufferArray()              // function to clear buffer array
 {
   for (int i=0; i<count;i++)
-    { buffer[i]=NULL;}                  // clear all index of array with command NULL
+    { buffer[i]=NULL;}               // clear all index of array with command NULL
 }
