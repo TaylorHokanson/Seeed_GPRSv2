@@ -9,13 +9,12 @@
 #include <SoftwareSerial.h>
  
 SoftwareSerial GPRS(7, 8);
-unsigned char buffer[64];          // buffer array for data recieve over serial port
+unsigned char buffer[256];          // buffer array for data recieve over serial port
 int count=0;                       // counter for buffer array 
 void setup()
 {
-  GPRS.begin(9600);               // GPRS baud rate (software)  
-  Serial.begin(9600);             // Arduino baud rate (hardware)
- 
+  GPRS.begin(19200);               // GPRS baud rate (software)  
+  Serial.begin(19200);             // Arduino baud rate (hardware)
 }
  
 void loop()
