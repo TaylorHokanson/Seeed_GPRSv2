@@ -63,7 +63,13 @@ Command
 * AT+CMGD=1,4 | delete all SMS messages
 
 Response  
-* +CMTI: "SM",1 = text received, memory location
+* +CMTI: "SM",1 = text received, memory location  
+
+Gotchas  
+Quotes indicate string start/stop to the Arduino, so including AT
+commands with internal quotes can be tricky. You're supposed to be able
+to do `\"` to make a quotation mark work within a string, but I couldn't make the GPRS
+understand it.
 
 ### Now have fun
 
