@@ -7,7 +7,7 @@ I've added to them and cleaned things up for readability. I'm working in OSX.
 
 ### Activate GSM card
 
-I got mine through [Adafruit](https://www.adafruit.com/products/2505), but it looks like you can order straight through Ting too.
+I got mine through [Adafruit](https://www.adafruit.com/products/2505), but it looks like you can order straight through Ting too.  
 ting.com/go  
 Enter IMEI number from GPRS (on SIM900 chip)  
 Enter number on back of sim
@@ -21,7 +21,10 @@ Attach GPRS to Arduino
 ### Serial monitor
 
 I couldn't do everything the Seeed tutorial asked me to do with the
-Arduino IDE serial monitor, so I downloaded [Coolterm](http://freeware.the-meiers.org/) (free).  
+Arduino IDE serial monitor, so I downloaded
+[Coolterm](http://freeware.the-meiers.org/) (free). I'll include my
+Coolterm profile, though you may have to go in and reset the port
+anyway. 
 
 Options  
 * Serial Port  
