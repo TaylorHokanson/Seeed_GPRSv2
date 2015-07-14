@@ -9,14 +9,14 @@ I've added to them and cleaned things up for readability. I'm working in OSX.
 
 I got mine through [Adafruit](https://www.adafruit.com/products/2505), but it looks like you can order straight through Ting too.
 ting.com/go  
-Enter IMEI number from Seeed board  
+Enter IMEI number from GPRS (on SIM900 chip)  
 Enter number on back of sim
 
 ### Board preparation
 
-Insert activated SIM card into Seeed board  
+Insert activated SIM card into GPRS  
 Upload default.ino to Arduino  
-Attach Seeed board to Arduino  
+Attach GPRS to Arduino  
 
 ### Serial monitor
 
@@ -38,7 +38,7 @@ increase the serial buffer size. This can't be done from the IDE,
 rather, you have to edit the following files:  
 /Applications/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino/HardwareSerial.h  
 /Applications/Arduino.app/Contents/Java/hardware/arduino/avr/libraries/SoftwareSerial.h  
-Look for all instances of 64 and replace with 256. Note that this takes
+Look for all instances of buffers set to 64 and replace with 256. Note that this takes
 up a lot of memory, so make sure to change back when you move on to a
 new project.
 
@@ -56,10 +56,13 @@ attached AT Commands PDF lists all the different things you can talk to
 the board about. Here are some useful ones:
 
 Command  
-* AT+CMGR=1 | print first SMS in memory
-* ATC+IFC=1,1 | set software flow control
-* AT&W | Store active profile (must be done to maintain software flow control after restart)
+* AT+CMGR=1 | print first SMS in memory 
+* AT+CMGD=1,4 | delete all SMS messages
 
 Response  
 * +CMTI: "SM",1 = text received, memory location
+
+### Now have fun
+
+Please send me a note or some photos if you use this in a project. Enjoy!
   
